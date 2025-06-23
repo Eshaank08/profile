@@ -3,7 +3,7 @@ export default function Component() {
     <div className="min-h-screen bg-[#f0f0f0] flex items-center justify-center px-8">
       <div className="max-w-md space-y-4 py-12 mx-auto">
         {/* Name */}
-        <h1 className="text-black font-normal text-xl font-playfair-display">Hi, I'm Eshaan Kansal</h1>
+        <h1 className="text-black font-normal text-xl font-playfair-display">Hi, I&apos;m Eshaan Kansal</h1>
 
         {/* Main description */}
         <p className="text-black leading-relaxed text-base font-playfair-display">
