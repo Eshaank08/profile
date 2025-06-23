@@ -7,34 +7,37 @@ export default function Component() {
 
         {/* Main description */}
         <p className="text-black leading-relaxed">
-          21 years old, INTJ. Indian, living in Germany. I am the marketing guy, a bit funny and mostly anxious.
+          21 years old, INTJ. Indian, living in Germany.
+          <br />
+          I am the marketing guy, a bit funny and mostly anxious.
         </p>
+
+        <p className="text-black leading-relaxed">
+          I used to play football, now I train like a hybrid athlete and eat burgers for cheatmeals.
+        </p>
+        <p className="text-black leading-relaxed">This is what I am doing</p>
 
         <p className="text-black leading-relaxed">Building the go-to platform around consulting.</p>
 
         <p className="text-black leading-relaxed">
           We help people connect with experts all around the world so they can get 1:1 mentorship.{" "}
           <a href="#" className="underline hover:no-underline">
-            Link
+            Socialease
           </a>
         </p>
 
         <p className="text-black leading-relaxed">
-          We train experts to build and help small and medium sized businesses.{" "}
+        We also help people become experts, and we advise other small and medium sized businesses. If you want to get in touch regarding that{" "}
           <a href="#" className="underline hover:no-underline">
-            Link
+            Connect with me here.
           </a>
         </p>
 
         <p className="text-black leading-relaxed">
-          I also created an AI chatbot which can mentor you for free if you don't like talking to someone.{" "}
+          I also created an AI chatbot which can mentor you for free if you don&apos;t like talking to someone.{" "}
           <a href="#" className="underline hover:no-underline">
-            Link
+            Socialease AI 
           </a>
-        </p>
-
-        <p className="text-black leading-relaxed">
-          I used to play football, now I train like a hybrid athlete and eat burgers for fun.
         </p>
 
         <p className="text-black leading-relaxed">
@@ -55,9 +58,6 @@ export default function Component() {
           </a>
           <a href="#" className="underline hover:no-underline">
             instagram
-          </a>
-          <a href="mailto:eshaan@example.com" className="underline hover:no-underline">
-            eshaan@example.com
           </a>
         </div>
       </div>
