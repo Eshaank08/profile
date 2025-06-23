@@ -120,3 +120,31 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom Font Declarations */
+@font-face {
+  font-family: 'GazetteLTStd-Roman';
+  src: url('/fonts/GazetteLTStd-Roman.woff2') format('woff2'),
+       url('/fonts/GazetteLTStd-Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Larsseit';
+  src: url('/fonts/Larsseit.woff2') format('woff2'),
+       url('/fonts/Larsseit.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Font Utility Classes */
+.gazette-font {
+  font-family: 'GazetteLTStd-Roman', serif;
+}
+
+.larsseit-font {
+  font-family: 'Larsseit', sans-serif;
+}
