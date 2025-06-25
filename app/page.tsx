@@ -7,7 +7,7 @@ export default function Component() {
 
         {/* Main description */}
         <p className="text-black leading-relaxed text-base font-playfair-display">
-          21 years old, INTJ. 
+          21 years old, INTJ-P. 
           <br />
           Indian, living in Germany. I call myself the jack of all trades.
           I am the marketing guy, a bit funny and mostly anxious.
