@@ -20,10 +20,8 @@ export default function Component() {
         <p className="text-black leading-relaxed text-base font-playfair-display">I used to play football, now I train like a hybrid athlete and eat burgers for cheatmeals.</p>
         <p className="text-black leading-relaxed text-base font-playfair-display">This is what I am doing</p>
 
-        <p className="text-black leading-relaxed text-base font-playfair-display">Building the go-to platform around consulting.</p>
-
         <p className="text-black leading-relaxed text-base font-playfair-display">
-          Building a marketplace for you to connect with experts, or show your products to the whole world, talk with an mentor to help yourself out.{" "}
+          Building a marketplace for you to connect with experts, or show your products to the whole world,  or talk with an AI mentor to help yourself out.{" "}
           <a 
             href="https://www.socialease.space" 
             className="italic font-bold no-underline hover:opacity-80 text-base font-playfair-display"
