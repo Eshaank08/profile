@@ -1,3 +1,7 @@
+'use client';
+
+import { trackSocialClick, trackBusinessClick, trackLinkClick } from '@/lib/analytics';
+
 export default function Component() {
   return (
     <div className="min-h-screen bg-[#f0f0f0] flex items-center justify-center px-8">
@@ -19,24 +23,35 @@ export default function Component() {
         <p className="text-black leading-relaxed text-base font-playfair-display">Building the go-to platform around consulting.</p>
 
         <p className="text-black leading-relaxed text-base font-playfair-display">
-          We help people connect with experts all around the world so they can get 1:1 mentorship.{" "}
-          <a href="https://www.socialease.space" className="italic font-bold no-underline hover:opacity-80 text-base font-playfair-display">
+          Building a marketplace for you to connect with experts, or show your products to the whole world, talk with an mentor to help yourself out.{" "}
+          <a 
+            href="https://www.socialease.space" 
+            className="italic font-bold no-underline hover:opacity-80 text-base font-playfair-display"
+            onClick={() => trackLinkClick('Socialease', 'https://www.socialease.space', 'Product')}
+          >
             Socialease
           </a>
         </p>
 
         <p className="text-black leading-relaxed text-base font-playfair-display">
-        We also help people become experts, and we advise other small and medium sized businesses. If you want to get in touch regarding that{" "}
-          <a href="https://cal.com/eshaan-kansal" className="italic font-bold no-underline hover:opacity-80 text-base">
-            Connect with me here.
+          You can just pay me too, if you want help in building apps or with marketing or anyother things haha.{" "}
+          <a 
+            href="https://calendly.com/eshaankansal0/general-meeting" 
+            className="italic font-bold no-underline hover:opacity-80 text-base"
+            onClick={() => trackBusinessClick('Personal Consulting', 'https://calendly.com/eshaankansal0/general-meeting')}
+          >
+            Connect with me here
           </a>
         </p>
 
         <p className="text-black leading-relaxed text-base font-playfair-display">
-          I also created an AI chatbot which can mentor you for free if you don&apos;t like talking to someone. xD{" "}
-          <a href="https://socialease.in" className="italic font-bold no-underline hover:opacity-80 text-base">
-          <br />
-            Socialease AI 
+        We also help people become experts, and we advise other small and medium sized businesses. If you want to get in touch regarding that{" "}
+          <a 
+            href="https://cal.com/eshaan-kansal" 
+            className="italic font-bold no-underline hover:opacity-80 text-base"
+            onClick={() => trackBusinessClick('Business Consulting', 'https://cal.com/eshaan-kansal')}
+          >
+            Connect with me here.
           </a>
         </p>
 
@@ -47,16 +62,32 @@ export default function Component() {
 
         {/* Links */}
         <div className="flex flex-wrap gap-3 text-black text-base font-playfair-display">
-          <a href="https://www.youtube.com/@eshaankansal/videos" className="italic font-bold no-underline hover:opacity-80 text-base">
+          <a 
+            href="https://www.youtube.com/@eshaankansal/videos" 
+            className="italic font-bold no-underline hover:opacity-80 text-base"
+            onClick={() => trackSocialClick('YouTube', 'https://www.youtube.com/@eshaankansal/videos')}
+          >
             YouTube
           </a>
-          <a href="https://x.com/eshaankansal" className="italic font-bold no-underline hover:opacity-80 text-base">
+          <a 
+            href="https://x.com/eshaankansal" 
+            className="italic font-bold no-underline hover:opacity-80 text-base"
+            onClick={() => trackSocialClick('Twitter/X', 'https://x.com/eshaankansal')}
+          >
             X(formerly twitter)
           </a>
-          <a href="https://www.linkedin.com/in/eshaan-kansal-277876241/" className="italic font-bold no-underline hover:opacity-80 text-base">
+          <a 
+            href="https://www.linkedin.com/in/eshaan-kansal-277876241/" 
+            className="italic font-bold no-underline hover:opacity-80 text-base"
+            onClick={() => trackSocialClick('LinkedIn', 'https://www.linkedin.com/in/eshaan-kansal-277876241/')}
+          >
             LinkedIn
           </a>
-          <a href="https://www.instagram.com/eshaan.kansal" className="italic font-bold no-underline hover:opacity-80 text-base">
+          <a 
+            href="https://www.instagram.com/eshaan.kansal" 
+            className="italic font-bold no-underline hover:opacity-80 text-base"
+            onClick={() => trackSocialClick('Instagram', 'https://www.instagram.com/eshaan.kansal')}
+          >
             Instagram
           </a>
         </div>
