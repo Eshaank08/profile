@@ -23,7 +23,8 @@ export default function Component() {
 
         <p className="text-black leading-relaxed text-base md:text-lg font-playfair-display">
           Founder - Socialease
-          A marketplace for you to connect with certified experts within minutes across various categories.
+          <br />
+          A marketplace for you to sell your skills and make money. 
           We have 1800+ people in the waitlist.{" "}
           <a 
             href="https://www.socialease.space" 
@@ -35,7 +36,7 @@ export default function Component() {
         </p>
 
         <p className="text-black leading-relaxed text-base md:text-lg font-playfair-display">
-          If you want help in building apps or with marketing or any other things.(Only serious work){" "}
+          I am down to help you with apps, content or anything. (Only serious work){" "}
           <a 
             href="https://calendly.com/eshaankansal0/general-meeting" 
             className="italic font-bold no-underline hover:opacity-80 text-base md:text-lg"
@@ -46,7 +47,7 @@ export default function Component() {
         </p>
 
         <p className="text-black leading-relaxed text-base md:text-lg font-playfair-display">
-        We also help people become certified experts, and we advise other small and medium sized businesses.{" "}
+        We advise other small business owners. For that {" "}
           <a 
             href="https://cal.com/eshaan-kansal" 
             className="italic font-bold no-underline hover:opacity-80 text-base md:text-lg"
