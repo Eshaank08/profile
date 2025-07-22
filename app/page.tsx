@@ -20,12 +20,13 @@ export default function Component() {
 
         <p className="text-black leading-relaxed text-base md:text-lg font-playfair-display">I used to play football, now I train like a hybrid athlete and eat burgers for cheatmeals.</p>
         <p className="text-black leading-relaxed text-base md:text-lg font-playfair-display">This is what I am doing</p>
-
         <p className="text-black leading-relaxed text-base md:text-lg font-playfair-display">
+          I used to run an agency, worked and consulted over 150+ people.
+          <br />
           Founder - Socialease
           <br />
-          A marketplace for you to sell your skills and make money. 
-          We have 1800+ people in the waitlist.{" "}
+          A platfrorm for you to sell your skills and make money. 
+          1800+ people in the waitlist.{" "}
           <a 
             href="https://www.socialease.space" 
             className="italic font-bold no-underline hover:opacity-80 text-base md:text-lg font-playfair-display"
@@ -36,7 +37,7 @@ export default function Component() {
         </p>
 
         <p className="text-black leading-relaxed text-base md:text-lg font-playfair-display">
-          I am down to help you with apps, content or anything. (Only serious work){" "}
+          Work 1:1 with me (Mentorships, branding business,etc)(Only serious work){" "}
           <a 
             href="https://calendly.com/eshaankansal0/general-meeting" 
             className="italic font-bold no-underline hover:opacity-80 text-base md:text-lg"
