@@ -6,7 +6,6 @@ import { useState, useEffect } from 'react';
 // Icons removed as they're no longer used
 
 export default function Component() {
-  const [email, setEmail] = useState('');
   const [darkMode, setDarkMode] = useState(false);
   
   // Always use light mode
