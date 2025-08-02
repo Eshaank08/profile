@@ -41,8 +41,8 @@ async function fetchInstagramStats(): Promise<InstagramData> {
     lastFetched = now;
     
     return data;
-  } catch (error) {
-    console.error('Error fetching Instagram data:', error);
+  } catch (err) {
+    console.error('Error fetching Instagram data:', err);
     throw new Error('Failed to fetch Instagram data');
   }
 }

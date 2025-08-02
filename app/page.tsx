@@ -1,9 +1,9 @@
 'use client';
 
-import { trackSocialClick, trackBusinessClick, trackLinkClick } from '@/lib/analytics';
+import { trackSocialClick, trackBusinessClick } from '@/lib/analytics';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { Moon, Sun } from 'lucide-react';
+// Icons removed as they're no longer used
 
 export default function Component() {
   const [email, setEmail] = useState('');
@@ -27,13 +27,7 @@ export default function Component() {
     localStorage.setItem('darkMode', darkMode.toString());
   }, [darkMode]);
   
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you'd handle the subscription logic
-    console.log('Subscribing email:', email);
-    // Reset the form
-    setEmail('');
-  };
+  // Email subscription functionality removed
 
   return (
     <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'} transition-colors`}>
@@ -41,7 +35,7 @@ export default function Component() {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-12">
           <div className="md:pt-2">
-            <h1 className="text-3xl font-bold mb-1">Hi, I'm Eshaan</h1>
+            <h1 className="text-3xl font-bold mb-1">Hi, I&apos;m Eshaan</h1>
             <p className={`italic ${darkMode ? "text-gray-400" : "text-gray-500"} text-sm mb-1 font-light`}>entrepreneur</p>
             <p className={darkMode ? "text-gray-300" : "text-gray-600"}>21 years old, INTJ-P.</p>
           </div>

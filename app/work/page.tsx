@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
@@ -28,27 +27,7 @@ export default function WorkPage() {
     localStorage.setItem('darkMode', darkMode.toString());
   }, [darkMode]);
 
-  // Define portfolio items
-  const portfolioItems = [
-    {
-      id: 1,
-      title: 'Client Portfolio Growth',
-      description: 'Helped a client grow their Instagram following from 5K to 50K in 6 months with targeted content strategy.',
-      image: '/images/work/portfolio-1.jpg'
-    },
-    {
-      id: 2,
-      title: 'Brand Identity Redesign',
-      description: 'Complete brand overhaul for a tech startup resulting in 300% increase in engagement.',
-      image: '/images/work/wolf.jpg'
-    },
-    {
-      id: 3,
-      title: 'Content Strategy Development',
-      description: 'Developed a comprehensive content calendar and posting strategy for multiple clients.',
-      image: '/images/work/portfolio-3.jpg'
-    },
-  ];
+  // Portfolio items will be added later
 
   const handleBackClick = () => {
     window.history.back();
@@ -70,7 +49,7 @@ export default function WorkPage() {
         <div className="mb-12">
           <h1 className="text-3xl font-bold mb-3">I am the marketing guy</h1>
           <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} mb-6`}>
-            I've worked with over 150 individuals and businesses to help them establish a strong personal brand and marketing strategy.
+            I&apos;ve worked with over 150 individuals and businesses to help them establish a strong personal brand and marketing strategy.
           </p>
         </div>
         
