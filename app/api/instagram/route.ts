@@ -51,7 +51,7 @@ export async function GET() {
   try {
     const data = await fetchInstagramStats();
     return NextResponse.json(data);
-  } catch (err) {
+  } catch (_err) {
     return NextResponse.json(
       { error: 'Failed to fetch Instagram data' },
       { status: 500 }
