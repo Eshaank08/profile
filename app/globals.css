@@ -148,3 +148,36 @@
 .larsseit-font {
   font-family: 'Larsseit', sans-serif;
 }
+
+/* Marquee Animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100%));
+  }
+}
+
+.animate-marquee {
+  animation: marquee linear infinite;
+}
+
+/* Marquee Container Styles */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 1rem;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-content-reverse {
+  display: flex;
+  gap: 1rem;
+  animation: marquee 30s linear infinite reverse;
+}

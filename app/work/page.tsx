@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import ViewsTipsCarousel from '@/components/views-tips-carousel';
+import { ServiceComparison } from '@/components/service-comparison';
+import { TestimonialsMarquee } from '@/components/testimonials-marquee';
 
 export default function WorkPage() {
   const [darkMode, setDarkMode] = useState(false);
@@ -53,9 +56,11 @@ export default function WorkPage() {
           </p>
         </div>
         
-        {/* Placeholder */}
+        {/* Tips Carousels */}
         <div className="mb-12">
-          <h2 className="text-2xl font-medium mb-6">I will make this page soon</h2>
+          <ViewsTipsCarousel />
+          <ServiceComparison />
+          <TestimonialsMarquee />
         </div>
         
         {/* Contact */}
