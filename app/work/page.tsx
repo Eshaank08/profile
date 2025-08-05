@@ -6,6 +6,8 @@ import { ArrowLeft } from 'lucide-react';
 import ViewsTipsCarousel from '@/components/views-tips-carousel';
 import { ServiceComparison } from '@/components/service-comparison';
 import { TestimonialsMarquee } from '@/components/testimonials-marquee';
+import CaseStudyCarousel from '@/components/case-study-carousel';
+import { CTAButton } from '@/components/ui/cta-button';
 
 export default function WorkPage() {
   const [darkMode, setDarkMode] = useState(false);
@@ -56,28 +58,21 @@ export default function WorkPage() {
           </p>
         </div>
         
-        {/* Tips Carousels */}
+        {/* Content Sections */}
         <div className="mb-12">
           <ViewsTipsCarousel />
+          
+          <CaseStudyCarousel />
+          <CTAButton />
+          
           <ServiceComparison />
+          <CTAButton />
+          
           <TestimonialsMarquee />
+          <CTAButton />
         </div>
         
-        {/* Contact */}
-        <div>
-          <h2 className="text-2xl font-medium mb-6">Work With Me</h2>
-          <div className={`p-6 rounded-lg ${darkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
-            <p className="mb-4">Interested in working together? Book a call to discuss your personal branding needs.</p>
-            <Link 
-              href="https://cal.com/eshaan-kansal/15min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`inline-block px-6 py-3 rounded-md ${darkMode ? 'bg-blue-600' : 'bg-black'} text-white font-medium transition-opacity hover:opacity-90`}
-            >
-              Book a Call
-            </Link>
-          </div>
-        </div>
+        {/* End of content sections */}
       </div>
     </div>
   );

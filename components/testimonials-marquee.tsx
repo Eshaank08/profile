@@ -8,7 +8,7 @@ const reviews = [
     img: "https://avatar.vercel.sh/alex",
   },
   {
-    name: "रोहित", // Hindi name for Hinglish testimonial
+    name: "Ankit",
     username: "Business Owner",
     body: "Appse baat krke sach mai bahut acha laga aur appki wajah se mujhe market ka update pata chal paya.",
     img: "https://avatar.vercel.sh/rohit",
