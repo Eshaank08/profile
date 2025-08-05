@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import ViewsTipsCarousel from '@/components/views-tips-carousel';
 import { ServiceComparison } from '@/components/service-comparison';

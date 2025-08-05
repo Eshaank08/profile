@@ -31,8 +31,7 @@ const Card = ({ data, showCarousel = true, cardsPerView = 3 }: CardProps) => {
     setIsSingleCard(data?.length === 1);
   }, [data]);
 
-  // Calculate width percentage for each card based on cardsPerView
-  const cardWidth = 75 / effectiveCardsPerView;
+  // Width percentage is calculated inline where needed
 
   const nextSlide = () => {
     if (isAnimating || !showCarousel || !data) return;

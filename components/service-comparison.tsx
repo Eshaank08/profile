@@ -123,7 +123,7 @@ export function ServiceComparison() {
       <div className="w-full max-w-5xl mx-auto">
         <div className="flex flex-col items-center gap-4 mb-12">
           <h2 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
-            How We're Different
+            How We&apos;re Different
           </h2>
           <p className="text-lg text-zinc-600 dark:text-zinc-400 text-center max-w-3xl">
             Compare our comprehensive approach to personal branding and marketing with conventional methods
