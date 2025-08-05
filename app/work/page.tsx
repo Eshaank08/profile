@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import ViewsTipsCarousel from '@/components/views-tips-carousel';
 import { ServiceComparison } from '@/components/service-comparison';
@@ -33,21 +34,16 @@ export default function WorkPage() {
 
   // Portfolio items will be added later
 
-  const handleBackClick = () => {
-    window.history.back();
-  };
+  // No longer need handleBackClick as we're using direct Link
 
   return (
     <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         {/* Back Button */}
-        <button 
-          onClick={handleBackClick}
-          className="flex items-center mb-8 hover:opacity-80 transition-opacity"
-        >
+        <Link href="/" className="flex items-center mb-8 hover:opacity-80 transition-opacity">
           <ArrowLeft className="mr-2 h-5 w-5" />
           <span>Back to Home</span>
-        </button>
+        </Link>
         
         {/* Header */}
         <div className="mb-12">
