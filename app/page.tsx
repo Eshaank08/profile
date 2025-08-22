@@ -7,46 +7,72 @@ import { useState, useEffect } from 'react';
 
 export default function Component() {
   const [darkMode, setDarkMode] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   
-  // Always use light mode
+  // Handle client-side operations after component mounts
   useEffect(() => {
-    // Always default to light mode
-    setDarkMode(false);
-    // Save preference to localStorage
-    localStorage.setItem('darkMode', 'false');
+    setIsMounted(true);
+    // Check for stored preference
+    const storedDarkMode = localStorage.getItem('darkMode');
+    if (storedDarkMode) {
+      setDarkMode(storedDarkMode === 'true');
+    }
   }, []);
   
   // Update document class and save preference when dark mode changes
   useEffect(() => {
+    if (!isMounted) return;
+    
     if (darkMode) {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
     }
     localStorage.setItem('darkMode', darkMode.toString());
-  }, [darkMode]);
+  }, [darkMode, isMounted]);
+  
+  // Toggle theme function
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
   
   // Email subscription functionality removed
 
   return (
-    <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'} transition-colors`}>
-      <div className="max-w-4xl mx-auto p-4 sm:p-6 md:p-8">
+    <div className={`min-h-screen ${darkMode ? 'bg-black text-white' : 'bg-white text-black'} transition-colors`}>
+      <div className="max-w-4xl mx-auto p-4 sm:p-6 md:p-8 relative">
+        {/* Theme toggle button - fixed position */}
+        <button
+          onClick={toggleTheme}
+          className={`absolute right-4 sm:right-6 md:right-8 top-4 sm:top-6 md:top-8 flex items-center justify-center p-2 rounded-full w-10 h-10 transition-colors ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'}`}
+          aria-label={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
+        >
+          {darkMode ? (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-yellow-300">
+              <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-gray-700">
+              <path fillRule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clipRule="evenodd" />
+            </svg>
+          )}
+        </button>
+        
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-12">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-12 pt-10 md:pt-0">
           <div className="md:pt-2">
             <h1 className="text-3xl font-bold mb-1">Hi, I&apos;m Eshaan</h1>
-            <p className={`italic ${darkMode ? "text-gray-400" : "text-gray-500"} text-sm mb-1 font-light`}>entrepreneur</p>
-            <p className={darkMode ? "text-gray-300" : "text-gray-600"}>21 years old, INTJ-P.</p>
+            <p className={`italic ${darkMode ? "text-gray-300" : "text-gray-500"} text-sm mb-1 font-light`}>entrepreneur</p>
+            <p className={darkMode ? "text-gray-200" : "text-gray-600"}>21 years old, INTJ-P.</p>
           </div>
-          {/* Profile image and dark mode toggle removed */}
         </div>
 
         {/* About Section */}
         <div className="mb-12 px-1">
           <h2 className="text-xl font-medium mb-4">About</h2>
-          <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'} mb-3`}>Indian, living in Germany. I call myself the jack of all trades.</p>
-          <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'} mb-3`}>I used to play football, now I train like a hybrid athlete and eat burgers for cheatmeals.</p>
-          <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'} mb-3`}>I am the marketing guy. I yap about tech, business or anything tbh.</p>
+          <p className={`${darkMode ? 'text-gray-100' : 'text-gray-700'} mb-3`}>Indian, living in Germany. I call myself the jack of all trades.</p>
+          <p className={`${darkMode ? 'text-gray-100' : 'text-gray-700'} mb-3`}>I used to play football, now I train like a hybrid athlete and eat burgers for cheatmeals.</p>
+          <p className={`${darkMode ? 'text-gray-100' : 'text-gray-700'} mb-3`}>I am the marketing guy. I yap about tech, business or anything tbh.</p>
           
           {/* Social Media Icons */}
           <div className="flex space-x-4 mt-4">
