@@ -190,7 +190,35 @@ export default function Component() {
               </div>
             </a>
             
-            {/* Work Experience Item 3 */}
+            {/* Work Experience Item 3 - Founder's Kit */}
+            <a 
+              href="https://FounderSKIT.IN" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => trackBusinessClick('founderskit', 'https://FounderSKIT.IN')}
+              className="block hover:opacity-80 transition-opacity"
+            >
+              <div className="flex justify-between items-start">
+                <div className="flex items-start">
+                  <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
+                    <Image 
+                      src="/images/work/3.png" 
+                      alt="Founder's Kit" 
+                      width={48} 
+                      height={48}
+                      quality={100}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">Founder's Kit</h3>
+                    <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>Build your satrtup within 7 days by pre built saas templates and ai automations and marketing guides for free.</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            
+            {/* Work Experience Item 4 - Instagram */}
             <a 
               href="https://instagram.com/eshaan.kansal" 
               target="_blank" 
