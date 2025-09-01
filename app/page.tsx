@@ -77,13 +77,13 @@ export default function Component() {
           {/* Social Media Icons */}
           <div className="flex space-x-4 mt-4">
             <a 
-              href="https://www.youtube.com/eshaankansal" 
-              onClick={() => trackSocialClick('YouTube', 'https://www.youtube.com/eshaankansal')}
+              href="https://youtube.com/@eshaankansal?si=WfrLFGocSytwD-R6" 
+              onClick={() => trackSocialClick('YouTube', 'https://youtube.com/@eshaankansal?si=WfrLFGocSytwD-R6')}
               className={`${darkMode ? 'text-white' : 'text-gray-800'} hover:opacity-80`}
               aria-label="YouTube"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
               </svg>
             </a>
             <a 
@@ -256,35 +256,65 @@ export default function Component() {
               </div>
             </a>
             
-             {/* Work Experience Item 5 - Book a call */}
-<a 
-  href="https://cal.com/eshaan-kansal/15min" 
-  target="_blank" 
-  rel="noopener noreferrer"
-  onClick={() => trackBusinessClick('calendar', 'https://cal.com/eshaan-kansal/15min')}
-  className="block hover:opacity-80 transition-opacity"
->
-  <div className="flex justify-between items-start">
-    <div className="flex items-start">
-      <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
-        <Image 
-          src="/images/work/image.png" 
-          alt="Book a call" 
-          width={200} 
-          height={200}
-          quality={100}
-          unoptimized={true}
-          className="w-full h-full object-cover scale-150"
-          style={{ imageRendering: 'crisp-edges' }}
-        />
-      </div>
-      <div>
-        <h3 className="font-medium">Book a call with me</h3>
-        <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>Connect 1:1 with me (Mentorships, branding, business, etc)</p>
-      </div>
-    </div>
-  </div>
-</a>
+            {/* Work Experience Item 5 - YouTube */}
+            <a 
+              href="https://youtube.com/@eshaankansal?si=WfrLFGocSytwD-R6" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => trackSocialClick('youtube', 'https://youtube.com/@eshaankansal?si=WfrLFGocSytwD-R6')}
+              className="block hover:opacity-80 transition-opacity"
+            >
+              <div className="flex justify-between items-start">
+                <div className="flex items-start">
+                  <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
+                    <Image 
+                      src="/images/work/yt.jpeg" 
+                      alt="YouTube Channel" 
+                      width={48} 
+                      height={48}
+                      quality={100}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-medium flex items-center">
+                      YouTube - Eshaan Kansal
+                    </h3>
+                    <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>Doing 30 days of daily posting about life business tech and marketing</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            
+            {/* Work Experience Item 6 - Book a call */}
+            <a 
+              href="https://cal.com/eshaan-kansal/15min" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => trackBusinessClick('calendar', 'https://cal.com/eshaan-kansal/15min')}
+              className="block hover:opacity-80 transition-opacity"
+            >
+              <div className="flex justify-between items-start">
+                <div className="flex items-start">
+                  <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
+                    <Image 
+                      src="/images/work/image.png" 
+                      alt="Book a call" 
+                      width={200} 
+                      height={200}
+                      quality={100}
+                      unoptimized={true}
+                      className="w-full h-full object-cover scale-150"
+                      style={{ imageRendering: 'crisp-edges' }}
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">Book a call with me</h3>
+                    <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>Connect 1:1 with me (Mentorships, branding, business, etc)</p>
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
         
