@@ -170,12 +170,12 @@ export default function Component() {
               </div>
             </a>
             
-            {/* Work Experience Item 5 - YouTube */}
+            {/* Work Experience Item 5 - Meeting Link */}
             <a 
-              href="https://youtube.com/@eshaankansal?si=WfrLFGocSytwD-R6" 
+              href="https://cal.com/eshaan-kansal/15min" 
               target="_blank" 
               rel="noopener noreferrer"
-              onClick={() => trackSocialClick('youtube', 'https://youtube.com/@eshaankansal?si=WfrLFGocSytwD-R6')}
+              onClick={() => trackSocialClick('Calender', 'https://cal.com/eshaan-kansal/15min')}
               className="block hover:opacity-80 transition-opacity"
             >
               <div className="flex justify-between items-start">
@@ -192,9 +192,9 @@ export default function Component() {
                   </div>
                   <div>
                     <h3 className="font-medium flex items-center">
-                      YouTube - Eshaan Kansal
+                      Book a meeting - Eshaan Kansal
                     </h3>
-                    <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>I make in depth videos about tech, business, marketing and funnels for companies</p>
+                    <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>Connect with me 1:1 to chat about Tech, Business, Marketing or AI</p>
                   </div>
                 </div>
               </div>
@@ -232,7 +232,7 @@ export default function Component() {
                         className="ml-1 inline-block"
                       />
                     </h3>
-                    <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>This is where you can connect with me.</p>
+                    <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>This is where I yap about Tech, Business and life in general</p>
                   </div>
                 </div>
               </div>
