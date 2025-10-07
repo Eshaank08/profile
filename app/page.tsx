@@ -260,7 +260,7 @@ export default function Component() {
                   </div>
                   <div>
                     <h3 className="font-medium">Founder&apos;s Kit</h3>
-                    <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>Build your satrtup within 7 days by pre built saas templates and ai automations and marketing guides for free.</p>
+                    <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>Build your startup within 7 days by pre built saas templates and ai automations and marketing guides for free.</p>
                   </div>
                 </div>
               </div>
