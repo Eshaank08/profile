@@ -6,15 +6,14 @@ import { useState, useEffect } from 'react';
 // Icons removed as they're no longer used
 
 export default function Component() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
-  
+
   // Handle client-side operations after component mounts
   useEffect(() => {
     setIsMounted(true);
-    // Check for stored preference
     const storedDarkMode = localStorage.getItem('darkMode');
-    if (storedDarkMode) {
+    if (storedDarkMode !== null) {
       setDarkMode(storedDarkMode === 'true');
     }
   }, []);
@@ -31,9 +30,16 @@ export default function Component() {
     localStorage.setItem('darkMode', darkMode.toString());
   }, [darkMode, isMounted]);
   
-  // Toggle theme function
   const toggleTheme = () => {
     setDarkMode(!darkMode);
+  };
+
+  const getAge = () => {
+    const birth = new Date(2004, 0, 8); // Jan 8, 2004
+    const today = new Date();
+    let age = today.getFullYear() - birth.getFullYear();
+    if (today < new Date(today.getFullYear(), 0, 8)) age--;
+    return age;
   };
   
   // Email subscription functionality removed
@@ -67,20 +73,24 @@ export default function Component() {
         </button>
         
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-12 pt-10 md:pt-0">
-          <div className="md:pt-2">
+        <div className="flex flex-row items-center mb-12 pt-10 md:pt-0 gap-5">
+          <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+            <Image src="/images/work/avatar.jpeg" alt="Eshaan Kansal" width={96} height={96} quality={100} className="w-full h-full object-cover object-top" />
+          </div>
+          <div>
             <h1 className="text-3xl font-bold mb-1">Hi, I&apos;m Eshaan</h1>
-            <p className={`italic ${darkMode ? "text-gray-300" : "text-gray-500"} text-sm mb-1 font-light`}>entrepreneur</p>
-            <p className={darkMode ? "text-gray-200" : "text-gray-600"}>21 years old, INTJ-P.</p>
+            <p className={`italic ${darkMode ? "text-gray-300" : "text-gray-500"} text-sm mb-1 font-light`}>founder · builder · marketer</p>
+            <p className={darkMode ? "text-gray-200" : "text-gray-600"}>{getAge()} years old, INTJ-P.</p>
           </div>
         </div>
 
         {/* About Section */}
         <div className="mb-12 px-1">
           <h2 className="text-xl font-medium mb-4">About</h2>
-          <p className={`${darkMode ? 'text-gray-100' : 'text-gray-700'} mb-3`}>Indian, living in Germany. I call myself the jack of all trades, basically an entrepreneur by day, athlete by the evening and philosopher by night</p>
-          <p className={`${darkMode ? 'text-gray-100' : 'text-gray-700'} mb-3`}>I used to play football, now I train like a hybrid athlete and eat burgers for cheatmeals.</p>
-          <p className={`${darkMode ? 'text-gray-100' : 'text-gray-700'} mb-3`}>I am the marketing guy. I yap about tech, business or anything tbh.</p>
+          <p className={`${darkMode ? 'text-gray-100' : 'text-gray-700'} mb-3`}>Indian, living in Germany. Entrepreneur by day, hybrid athlete by evening, philosopher by night. The jack of all trades, basically.</p>
+          <p className={`${darkMode ? 'text-gray-100' : 'text-gray-700'} mb-3`}>Started with content. Generated 2M+ impressions and built a 50,000-reader newsletter before pivoting to what I do now.</p>
+          <p className={`${darkMode ? 'text-gray-100' : 'text-gray-700'} mb-3`}>These days, I run a software company, building custom AI agents for businesses around the world.</p>
+          <p className={`${darkMode ? 'text-gray-100' : 'text-gray-700'} mb-3`}>When I&apos;m not building, I&apos;m lifting or playing some sport. And eating burgers, completely guilt-free.</p>
           
           {/* Social Media Icons */}
           <div className="flex space-x-4 mt-4">
@@ -137,169 +147,198 @@ export default function Component() {
         </div>
       </div>
 
-        {/* Work Experience Section */}
+        {/* Experience Section */}
         <div className="mb-12">
-          <h2 className="text-xl font-medium mb-4">This is what I am doing</h2>
-          
+          <h2 className="text-xl font-medium mb-4">Experience</h2>
+
           <div className="space-y-6">
-            {/* Work Experience Item 2 - Magic Labs */}
-            <a 
-              href="https://magiclabs.studio" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              onClick={() => trackBusinessClick('magicLabs', 'https://magiclabs.studio')}
-              className="block hover:opacity-80 transition-opacity"
-            >
-              <div className="flex justify-between items-start">
-                <div className="flex items-start">
-                  <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
-                    <Image 
-                      src="/images/work/wolf.png" 
-                      alt="Magic Labs" 
-                      width={100} 
-                      height={100}
-                      quality={100}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Co-founder at Magic Labs</h3>
-                    <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>We develop AI products/agents for people along with go to marketing plans to drive growth. Book a call now.</p>
-                  </div>
+            {/* Socialease Labs */}
+            <div className="flex justify-between items-start">
+              <div className="flex items-start">
+                <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden bg-white">
+                  <Image src="/images/work/socialease.jpeg" alt="Socialease Labs" width={48} height={48} quality={100} className="w-full h-full object-contain p-1" />
+                </div>
+                <div>
+                  <h3 className="font-medium">Founder</h3>
+                  <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Socialease Labs</p>
+                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>Building and deploying custom multi-agent AI systems for service businesses.</p>
                 </div>
               </div>
-            </a>
-            
-            {/* Work Experience Item 5 - Meeting Link */}
-            <a 
-              href="https://cal.com/eshaan-kansal/15min" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              onClick={() => trackSocialClick('Calender', 'https://cal.com/eshaan-kansal/15min')}
-              className="block hover:opacity-80 transition-opacity"
-            >
-              <div className="flex justify-between items-start">
-                <div className="flex items-start">
-                  <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
-                    <Image 
-                      src="/images/work/yt.jpeg" 
-                      alt="YouTube Channel" 
-                      width={48} 
-                      height={48}
-                      quality={100}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="font-medium flex items-center">
-                      Book a meeting - Eshaan Kansal
-                    </h3>
-                    <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>Connect with me 1:1 to chat about Tech, Business, Marketing or AI</p>
-                  </div>
+              <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'} whitespace-nowrap ml-4 pt-1`}>Mar 2026 – Present</span>
+            </div>
+
+            {/* Helmit GmbH */}
+            <div className="flex justify-between items-start">
+              <div className="flex items-start">
+                <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
+                  <Image src="/images/work/helmit-logo.png" alt="Helmit GmbH" width={48} height={48} quality={100} className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 className="font-medium">Growth Marketer</h3>
+                  <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Helmit GmbH · Munich, Germany</p>
+                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>UGC campaigns hitting millions of views, Meta Ads, influencer pipeline, and an AI lead gen agent for B2B.</p>
                 </div>
               </div>
-            </a>
-            
-            {/* Work Experience Item 4 - Instagram */}
-            <a 
-              href="https://instagram.com/eshaan.kansal" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              onClick={() => trackSocialClick('instagram', 'https://instagram.com/eshaan.kansal')}
-              className="block hover:opacity-80 transition-opacity"
-            >
-              <div className="flex justify-between items-start">
-                <div className="flex items-start">
-                  <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
-                    <Image 
-                      src="/images/work/main.png" 
-                      alt="Main Instagram" 
-                      width={48} 
-                      height={48}
-                      quality={100}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="font-medium flex items-center">
-                      Main Instagram - @eshaan.kansal
-                      <Image 
-                        src="/images/work/blue-tick.png" 
-                        alt="Verified" 
-                        width={16} 
-                        height={16}
-                        quality={100}
-                        className="ml-1 inline-block"
-                      />
-                    </h3>
-                    <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>This is where I yap about Tech, Business and life in general</p>
-                  </div>
+              <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'} whitespace-nowrap ml-4 pt-1`}>Oct 2025 – May 2026</span>
+            </div>
+
+            {/* Magic Labs */}
+            <div className="flex justify-between items-start">
+              <div className="flex items-start">
+                <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
+                  <Image src="/images/work/wolf.png" alt="Magic Labs" width={48} height={48} quality={100} className="w-full h-full object-cover scale-125" />
+                </div>
+                <div>
+                  <h3 className="font-medium">Co-founder</h3>
+                  <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Magic Labs</p>
+                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>Built AI products and agents with go-to-market strategies to drive growth for clients.</p>
                 </div>
               </div>
-            </a>
-            
-            {/* Work Experience Item 3 - Founder's Kit */}
-            <a 
-              href="https://FounderSKIT.IN" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              onClick={() => trackBusinessClick('founderskit', 'https://FounderSKIT.IN')}
-              className="block hover:opacity-80 transition-opacity"
-            >
-              <div className="flex justify-between items-start">
-                <div className="flex items-start">
-                  <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
-                    <Image 
-                      src="/images/work/3.png" 
-                      alt="Founder's Kit" 
-                      width={48} 
-                      height={48}
-                      quality={100}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Founder&apos;s Kit</h3>
-                    <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>Build your startup within 7 days by pre built saas templates and ai automations and marketing guides for free.</p>
-                  </div>
+              <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'} whitespace-nowrap ml-4 pt-1`}>Jul 2025 – Feb 2026</span>
+            </div>
+
+            {/* Content Creator */}
+            <div className="flex justify-between items-start">
+              <div className="flex items-start">
+                <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
+                  <Image src="/images/work/main.png" alt="Eshaan Kansal" width={48} height={48} quality={100} className="w-full h-full object-cover object-center" />
                 </div>
+                <div>
+                  <h3 className="font-medium flex items-center gap-1">
+                    Creator · @eshaankansal
+                    <Image src="/images/work/blue-tick.png" alt="Verified" width={14} height={14} quality={100} className="inline-block" />
+                  </h3>
+                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>talking about AI, tech, and whatever&apos;s on my mind.</p>
+                </div>
+              </div>
+              <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'} whitespace-nowrap ml-4 pt-1`}>Sep 2023 – Present</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Education Section */}
+        <div className="mb-12">
+          <h2 className="text-xl font-medium mb-4">Education</h2>
+
+          <div className="flex justify-between items-start">
+            <div className="flex items-start">
+              <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden bg-white flex items-center justify-center p-2">
+                <img src="/images/work/ku-mark.svg" alt="KU Eichstätt-Ingolstadt" className="w-full h-full object-contain" />
+              </div>
+              <div>
+                <h3 className="font-medium">B.Sc. Data Science</h3>
+                <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Katholische Universität Eichstätt-Ingolstadt, Germany</p>
+              </div>
+            </div>
+            <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'} whitespace-nowrap ml-4 pt-1`}>Oct 2024 – Oct 2027</span>
+          </div>
+        </div>
+
+        {/* Projects Section */}
+        <div className="mb-12">
+          <h2 className="text-xl font-medium mb-4">Projects</h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Donna */}
+            <a href="https://github.com/Eshaank08/donna" target="_blank" rel="noopener noreferrer" className={`block rounded-xl overflow-hidden border transition-all hover:scale-[1.02] ${darkMode ? 'border-gray-700 hover:border-gray-500' : 'border-gray-200 hover:border-gray-400'}`}>
+              <div className="aspect-video overflow-hidden">
+                <Image src="/images/projects/donna.png" alt="Donna" width={600} height={338} quality={90} className="w-full h-full object-cover object-top" />
+              </div>
+              <div className="p-4">
+                <h3 className="font-medium mb-1">Donna</h3>
+                <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Personal AI chief of staff. 11 specialist agents running Gmail, Calendar, Notion, and Obsidian.</p>
+              </div>
+            </a>
+
+            {/* Pocket Jarvis */}
+            <a href="https://donna.magiclabs.studio" target="_blank" rel="noopener noreferrer" className={`block rounded-xl overflow-hidden border transition-all hover:scale-[1.02] ${darkMode ? 'border-gray-700 hover:border-gray-500' : 'border-gray-200 hover:border-gray-400'}`}>
+              <div className="aspect-video overflow-hidden">
+                <Image src="/images/projects/pocket-jarvis.png" alt="Pocket Jarvis" width={600} height={338} quality={90} className="w-full h-full object-cover object-top" />
+              </div>
+              <div className="p-4">
+                <h3 className="font-medium mb-1">Pocket Jarvis</h3>
+                <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>AI chief of staff on WhatsApp and Telegram. No laptop, no dashboard, no friction.</p>
+              </div>
+            </a>
+
+            {/* Founderskit */}
+            <a href="https://founderskit.in" target="_blank" rel="noopener noreferrer" className={`block rounded-xl overflow-hidden border transition-all hover:scale-[1.02] ${darkMode ? 'border-gray-700 hover:border-gray-500' : 'border-gray-200 hover:border-gray-400'}`}>
+              <div className="aspect-video overflow-hidden">
+                <Image src="/images/projects/founderskit.png" alt="Founderskit" width={600} height={338} quality={90} className="w-full h-full object-cover object-top" />
+              </div>
+              <div className="p-4">
+                <h3 className="font-medium mb-1">Founderskit</h3>
+                <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Production-ready Next.js boilerplate with auth, payments, and email baked in. Ship your startup in days.</p>
+              </div>
+            </a>
+
+            {/* AgentCheck */}
+            <a href="https://github.com/Eshaank08/agent-check" target="_blank" rel="noopener noreferrer" className={`block rounded-xl overflow-hidden border transition-all hover:scale-[1.02] ${darkMode ? 'border-gray-700 hover:border-gray-500' : 'border-gray-200 hover:border-gray-400'}`}>
+              <div className="aspect-video overflow-hidden">
+                <Image src="/images/projects/agentcheck.png" alt="AgentCheck" width={600} height={338} quality={90} className="w-full h-full object-cover object-top" />
+              </div>
+              <div className="p-4">
+                <h3 className="font-medium mb-1">AgentCheck</h3>
+                <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Open-source CLI tool that security audits AI agents. Live on npm.</p>
+              </div>
+            </a>
+
+            {/* AI Therapist */}
+            <a href="https://ai-mentor-ruddy.vercel.app" target="_blank" rel="noopener noreferrer" className={`block rounded-xl overflow-hidden border transition-all hover:scale-[1.02] ${darkMode ? 'border-gray-700 hover:border-gray-500' : 'border-gray-200 hover:border-gray-400'}`}>
+              <div className="aspect-video overflow-hidden">
+                <Image src="/images/projects/ai-therapist.png" alt="AI Therapist" width={600} height={338} quality={90} className="w-full h-full object-cover object-top" />
+              </div>
+              <div className="p-4">
+                <h3 className="font-medium mb-1">AI Therapist</h3>
+                <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Conversational AI therapist for Gen Z with mood tracking, habit tracking, and gamified progress.</p>
+              </div>
+            </a>
+
+            {/* Socialease */}
+            <a href="https://socialease-platform-anzbfrmo5-eshaank08s-projects.vercel.app" target="_blank" rel="noopener noreferrer" onClick={() => trackBusinessClick('socialease', 'https://socialease-platform-anzbfrmo5-eshaank08s-projects.vercel.app')} className={`block rounded-xl overflow-hidden border transition-all hover:scale-[1.02] ${darkMode ? 'border-gray-700 hover:border-gray-500' : 'border-gray-200 hover:border-gray-400'}`}>
+              <div className="aspect-video overflow-hidden">
+                <Image src="/images/projects/socialease.png" alt="Socialease" width={600} height={338} quality={90} className="w-full h-full object-cover object-top" />
+              </div>
+              <div className="p-4">
+                <h3 className="font-medium mb-1">AI Consulting Platform</h3>
+                <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Connects users with AI experts within 10 minutes via smart matching. 2,000+ waitlist pre-launch.</p>
               </div>
             </a>
           </div>
         </div>
-        
-        {/* Other Projects Section */}
+
+        {/* Hackathons Section */}
         <div className="mb-12">
-          <h2 className="text-xl font-medium mb-4">Other projects</h2>
-          
+          <h2 className="text-xl font-medium mb-4">Hackathons</h2>
+
           <div className="space-y-6">
-            {/* Socialease project */}
-            <a 
-              href="https://socialease.space" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              onClick={() => trackBusinessClick('socialease', 'https://socialease.space')}
-              className="block hover:opacity-80 transition-opacity"
-            >
-              <div className="flex justify-between items-start">
-                <div className="flex items-start">
-                  <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
-                    <Image 
-                      src="/images/work/socialease.jpeg" 
-                      alt="Socialease logo" 
-                      width={48} 
-                      height={48}
-                      quality={100}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Founder - Socialease</h3>
-                    <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>An online campus for business enthusiasts and skilled professionals to learn and earn. 1800+ people in the waitlist.</p>
-                  </div>
+            {/* EDTH Defense Hackathon */}
+            <div className="flex justify-between items-start">
+              <div className="flex items-start">
+                <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
+                  <Image src="/images/work/edth-logo.png" alt="EDTH" width={48} height={48} quality={100} className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 className="font-medium">EDTH Defense Hackathon · Munich</h3>
+                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>Built and deployed an ML model to classify drone audio into three categories. Real-time leaderboard, spectral analysis, REST API submission. Team of 2.</p>
                 </div>
               </div>
-            </a>
+              <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'} whitespace-nowrap ml-4 pt-1`}>Oct 2025</span>
+            </div>
+
+            {/* VGI Flexi Hackathon */}
+            <div className="flex justify-between items-start">
+              <div className="flex items-start">
+                <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
+                  <Image src="/images/work/vgi-logo.png" alt="VGI" width={48} height={48} quality={100} className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 className="font-medium">VGI Flexi Spatio-Temporal Hackathon · Ingolstadt</h3>
+                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>Analysed anonymised bus travel data for rural Bavaria. Built static heatmaps and dynamic temporal visualisations of demand patterns. Team of 3.</p>
+                </div>
+              </div>
+              <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'} whitespace-nowrap ml-4 pt-1`}>Nov 2024</span>
+            </div>
           </div>
         </div>
       </div>
