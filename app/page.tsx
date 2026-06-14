@@ -164,7 +164,6 @@ export default function Component() {
                   <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>Building and deploying custom multi-agent AI systems for service businesses.</p>
                 </div>
               </div>
-              <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'} whitespace-nowrap ml-4 pt-1`}>Mar 2026 – Present</span>
             </div>
 
             {/* Helmit GmbH */}
@@ -179,7 +178,6 @@ export default function Component() {
                   <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>UGC campaigns hitting millions of views, Meta Ads, influencer pipeline, and an AI lead gen agent for B2B.</p>
                 </div>
               </div>
-              <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'} whitespace-nowrap ml-4 pt-1`}>Oct 2025 – May 2026</span>
             </div>
 
             {/* Magic Labs */}
@@ -194,7 +192,6 @@ export default function Component() {
                   <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>Built AI products and agents with go-to-market strategies to drive growth for clients.</p>
                 </div>
               </div>
-              <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'} whitespace-nowrap ml-4 pt-1`}>Jul 2025 – Feb 2026</span>
             </div>
 
             {/* Content Creator */}
@@ -211,7 +208,6 @@ export default function Component() {
                   <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>talking about AI, tech, and whatever&apos;s on my mind.</p>
                 </div>
               </div>
-              <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'} whitespace-nowrap ml-4 pt-1`}>Sep 2023 – Present</span>
             </div>
           </div>
         </div>
@@ -230,7 +226,6 @@ export default function Component() {
                 <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Katholische Universität Eichstätt-Ingolstadt, Germany</p>
               </div>
             </div>
-            <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'} whitespace-nowrap ml-4 pt-1`}>Oct 2024 – Oct 2027</span>
           </div>
         </div>
 
@@ -269,6 +264,17 @@ export default function Component() {
               <div className="p-4">
                 <h3 className="font-medium mb-1">Founderskit</h3>
                 <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Production-ready Next.js boilerplate with auth, payments, and email baked in. Ship your startup in days.</p>
+              </div>
+            </a>
+
+            {/* LearnBridge */}
+            <a href="https://github.com/Eshaank08/learn-bridge" target="_blank" rel="noopener noreferrer" className={`block rounded-xl overflow-hidden border transition-all hover:scale-[1.02] ${darkMode ? 'border-gray-700 hover:border-gray-500' : 'border-gray-200 hover:border-gray-400'}`}>
+              <div className="aspect-video overflow-hidden">
+                <img src="/images/projects/learnbridge.svg" alt="LearnBridge" width={600} height={338} className="w-full h-full object-cover" />
+              </div>
+              <div className="p-4">
+                <h3 className="font-medium mb-1">LearnBridge</h3>
+                <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>AI-powered education platform matching students to expert lessons in any language. Built with Claude. Free for students, globally.</p>
               </div>
             </a>
 
@@ -312,6 +318,20 @@ export default function Component() {
           <h2 className="text-xl font-medium mb-4">Hackathons</h2>
 
           <div className="space-y-6">
+            {/* Claude Build Club Munich */}
+            <div className="flex justify-between items-start">
+              <div className="flex items-start">
+                <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
+                  <img src="/images/work/claude-build-club.svg" alt="Claude Build Club" width={48} height={48} className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 className="font-medium">Claude Build Club Hackathon · Munich</h3>
+                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm`}>Built LearnBridge — an AI education platform that matches students to expert lessons in any language using Claude. Topic: education.</p>
+                </div>
+              </div>
+              <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'} whitespace-nowrap ml-4 pt-1`}>Jun 2026</span>
+            </div>
+
             {/* EDTH Defense Hackathon */}
             <div className="flex justify-between items-start">
               <div className="flex items-start">
