@@ -234,6 +234,17 @@ export default function Component() {
           <h2 className="text-xl font-medium mb-4">Projects</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* firstweek.de */}
+            <a href="https://firstweek.de" target="_blank" rel="noopener noreferrer" className={`block rounded-xl overflow-hidden border transition-all hover:scale-[1.02] ${darkMode ? 'border-gray-700 hover:border-gray-500' : 'border-gray-200 hover:border-gray-400'}`}>
+              <div className="aspect-video overflow-hidden">
+                <Image src="/images/projects/firstweek.png" alt="firstweek.de" width={600} height={338} quality={90} className="w-full h-full object-cover object-top" />
+              </div>
+              <div className="p-4">
+                <h3 className="font-medium mb-1">firstweek.de</h3>
+                <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Relocation platform for international students and workers moving to Germany — suburb-level rent data, commute times, and housing links across 16+ cities.</p>
+              </div>
+            </a>
+
             {/* Donna */}
             <a href="https://github.com/Eshaank08/donna" target="_blank" rel="noopener noreferrer" className={`block rounded-xl overflow-hidden border transition-all hover:scale-[1.02] ${darkMode ? 'border-gray-700 hover:border-gray-500' : 'border-gray-200 hover:border-gray-400'}`}>
               <div className="aspect-video overflow-hidden">
