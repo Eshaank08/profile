@@ -88,8 +88,7 @@ export default function Component() {
         <div className="mb-12 px-1">
           <h2 className="text-xl font-medium mb-4">About</h2>
           <p className={`${darkMode ? 'text-gray-100' : 'text-gray-700'} mb-3`}>Indian, living in Germany. Entrepreneur by day, hybrid athlete by evening, philosopher by night. The jack of all trades, basically.</p>
-          <p className={`${darkMode ? 'text-gray-100' : 'text-gray-700'} mb-3`}>Started with content. Generated 2M+ impressions and built a 50,000-reader newsletter before pivoting to what I do now.</p>
-          <p className={`${darkMode ? 'text-gray-100' : 'text-gray-700'} mb-3`}>These days, I run a software company, building custom AI agents for businesses around the world.</p>
+          <p className={`${darkMode ? 'text-gray-100' : 'text-gray-700'} mb-3`}>These days, I build products on the internet and market them with my brand — while working with other companies on the side.</p>
           <p className={`${darkMode ? 'text-gray-100' : 'text-gray-700'} mb-3`}>When I&apos;m not building, I&apos;m lifting or playing some sport. And eating burgers, completely guilt-free.</p>
           
           {/* Social Media Icons */}
@@ -151,17 +150,45 @@ export default function Component() {
         <div className="mb-12">
           <h2 className="text-xl font-medium mb-4">Experience</h2>
 
-          <div className="space-y-6">
-            {/* Socialease Labs */}
-            <div className="flex justify-between items-start">
+          <div className="space-y-8">
+            {/* Creator — Instagram */}
+            <a href="https://instagram.com/eshaan.kansal" target="_blank" rel="noopener noreferrer" className="flex justify-between items-start group">
               <div className="flex items-start">
-                <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden bg-white">
-                  <Image src="/images/work/socialease.jpeg" alt="Socialease Labs" width={48} height={48} quality={100} className="w-full h-full object-contain p-1" />
+                <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
+                  <Image src="/images/work/main.png" alt="Eshaan Kansal on Instagram" width={48} height={48} quality={100} className="w-full h-full object-cover object-center" />
                 </div>
                 <div>
+                  <h3 className="font-medium flex items-center gap-1 group-hover:opacity-80">
+                    Creator · @eshaan.kansal
+                    <Image src="/images/work/blue-tick.png" alt="Verified" width={14} height={14} quality={100} className="inline-block" />
+                  </h3>
+                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>talking about AI, tech, and whatever&apos;s on my mind.</p>
+                </div>
+              </div>
+            </a>
+
+            {/* Writing — X */}
+            <a href="https://twitter.com/eshaankansal" target="_blank" rel="noopener noreferrer" className="flex justify-between items-start group">
+              <div className="flex items-start">
+                <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
+                  <Image src="/images/work/x-avatar.jpg" alt="Eshaan Kansal on X" width={48} height={48} quality={100} className="w-full h-full object-cover object-center" />
+                </div>
+                <div>
+                  <h3 className="font-medium flex items-center gap-1 group-hover:opacity-80">
+                    My articles on X · @eshaankansal
+                    <Image src="/images/work/blue-tick.png" alt="Verified" width={14} height={14} quality={100} className="inline-block" />
+                  </h3>
+                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>articles and notes on building, marketing, and the systems I run.</p>
+                </div>
+              </div>
+            </a>
+
+            {/* Founder */}
+            <div className="flex justify-between items-start">
+              <div className="flex items-start">
+                <div>
                   <h3 className="font-medium">Founder</h3>
-                  <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Socialease Labs</p>
-                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>Building and deploying custom multi-agent AI systems for service businesses.</p>
+                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>Building and shipping my own products — AI agents, tools, and the systems that run them.</p>
                 </div>
               </div>
             </div>
@@ -175,16 +202,17 @@ export default function Component() {
                 <div>
                   <h3 className="font-medium">Growth Marketer</h3>
                   <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Helmit GmbH · Munich, Germany</p>
-                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>UGC campaigns hitting millions of views, Meta Ads, influencer pipeline, and an AI lead gen agent for B2B.</p>
+                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>UGC campaigns hitting millions of views, Meta Ads, influencer pipeline, website development, CRM management, and an AI lead gen agent for B2B.</p>
                 </div>
               </div>
+              <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'} whitespace-nowrap ml-4 pt-1`}>Oct 2025 – May 2026</span>
             </div>
 
             {/* Magic Labs */}
             <div className="flex justify-between items-start">
               <div className="flex items-start">
-                <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
-                  <Image src="/images/work/wolf.png" alt="Magic Labs" width={48} height={48} quality={100} className="w-full h-full object-cover scale-125" />
+                <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden bg-white flex items-center justify-center px-1">
+                  <Image src="/images/work/magic-labs.png" alt="Magic Labs" width={48} height={48} quality={100} className="w-full h-auto object-contain" />
                 </div>
                 <div>
                   <h3 className="font-medium">Co-founder</h3>
@@ -192,40 +220,9 @@ export default function Component() {
                   <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>Built AI products and agents with go-to-market strategies to drive growth for clients.</p>
                 </div>
               </div>
+              <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'} whitespace-nowrap ml-4 pt-1`}>May 2025 – Oct 2025</span>
             </div>
 
-            {/* Content Creator */}
-            <div className="flex justify-between items-start">
-              <div className="flex items-start">
-                <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
-                  <Image src="/images/work/main.png" alt="Eshaan Kansal" width={48} height={48} quality={100} className="w-full h-full object-cover object-center" />
-                </div>
-                <div>
-                  <h3 className="font-medium flex items-center gap-1">
-                    Creator · @eshaankansal
-                    <Image src="/images/work/blue-tick.png" alt="Verified" width={14} height={14} quality={100} className="inline-block" />
-                  </h3>
-                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>talking about AI, tech, and whatever&apos;s on my mind.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Education Section */}
-        <div className="mb-12">
-          <h2 className="text-xl font-medium mb-4">Education</h2>
-
-          <div className="flex justify-between items-start">
-            <div className="flex items-start">
-              <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden bg-white flex items-center justify-center p-2">
-                <img src="/images/work/ku-mark.svg" alt="KU Eichstätt-Ingolstadt" className="w-full h-full object-contain" />
-              </div>
-              <div>
-                <h3 className="font-medium">B.Sc. Data Science</h3>
-                <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Katholische Universität Eichstätt-Ingolstadt, Germany</p>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -321,6 +318,23 @@ export default function Component() {
                 <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Connects users with AI experts within 10 minutes via smart matching. 2,000+ waitlist pre-launch.</p>
               </div>
             </a>
+          </div>
+        </div>
+
+        {/* Education Section */}
+        <div className="mb-12">
+          <h2 className="text-xl font-medium mb-4">Education</h2>
+
+          <div className="flex justify-between items-start">
+            <div className="flex items-start">
+              <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden bg-white flex items-center justify-center p-2">
+                <img src="/images/work/ku-mark.svg" alt="KU Eichstätt-Ingolstadt" className="w-full h-full object-contain" />
+              </div>
+              <div>
+                <h3 className="font-medium">B.Sc. Data Science</h3>
+                <p className={`${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Katholische Universität Eichstätt-Ingolstadt, Germany</p>
+              </div>
+            </div>
           </div>
         </div>
 
