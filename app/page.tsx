@@ -186,9 +186,12 @@ export default function Component() {
             {/* Founder */}
             <div className="flex justify-between items-start">
               <div className="flex items-start">
+                <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
+                  <Image src={darkMode ? "/images/work/8ball-dark.png" : "/images/work/8ball-light.png"} alt="Founder" width={48} height={48} quality={100} className="w-full h-full object-cover" />
+                </div>
                 <div>
                   <h3 className="font-medium">Founder</h3>
-                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>Building and shipping my own products — AI agents, tools, and the systems that run them.</p>
+                  <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-sm mt-1`}>Building my own stuff: AI agents, tools, and the systems that run them.</p>
                 </div>
               </div>
             </div>
@@ -197,7 +200,7 @@ export default function Component() {
             <div className="flex justify-between items-start">
               <div className="flex items-start">
                 <div className="w-12 h-12 rounded-full mr-3 flex-shrink-0 overflow-hidden">
-                  <Image src="/images/work/helmit-logo.png" alt="Helmit GmbH" width={48} height={48} quality={100} className="w-full h-full object-cover" />
+                  <Image src="/images/work/helmit-icon.png" alt="Helmit GmbH" width={48} height={48} quality={100} className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h3 className="font-medium">Growth Marketer</h3>
